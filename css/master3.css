@@ -1,0 +1,82 @@
+body{
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+.right{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 25px;
+}
+.right .box{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.right .box .one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.right .box .one span:first-child{
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    margin: 0;
+}
+.right .box .one span:last-child{
+    font-size: 15px;
+    color: rgb(0 0 0/30%);
+}
+.right .box b{
+    font-size: 15px;
+    color: rgb(0 0 0/30%);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.right .box .two{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(0 0 0/20%);
+    margin-bottom: 20px;
+}
+.right .box .two span{
+    padding: 10px 5px;
+    background-color: #ddd;
+    color: black;
+    margin-left: 20px;
+    border-radius: 7px;
+    font-size: 15px;
+}
+.right .box .three{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .box .three .one{
+    width: 200px;
+    height: 3px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.right .box .three .one::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: green;
+}
+.right .box .three span:last-child{
+    font-size: 15px;
+    color: rgb(0 0 0/50%);
+}

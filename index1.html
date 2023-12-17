@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting</title>
+    <link rel="stylesheet" href="css/master1.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        /* The switch - the box around the slider */
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 3.5em;
+            height: 2em;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #9fccfa;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2em;
+            width: 2em;
+            inset: 0;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .switch input:checked + .slider {
+            background: #0974f1;
+        }
+
+        .switch input:focus + .slider {
+            box-shadow: 0 0 1px #0974f1;
+        }
+
+        .switch input:checked + .slider:before {
+            transform: translateX(1.6em);
+        }
+    </style>
+</head>
+<body>
+    <div class="right">
+        <div class="box box1">
+            <h2>site control</h2>
+            <b>control the website if there is maintance</b>
+            <div class="content">
+                <div class="left">
+                    <span>website control</span>
+                    <span>open close website and type the reason</span>
+                </div>
+                <div class="right">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="close message content"></textarea>
+        </div>
+        <div class="box box2">
+            <h2>general info</h2>
+            <b>general information about your account</b>
+            <div class="row row1">
+                <span>first name</span>
+                <input type="text" name="" id="" placeholder="first name">
+            </div>
+            <div class="row row2">
+                <span>last name</span>
+                <input type="text" name="" id="" placeholder="last name">
+            </div>
+            <div class="row row3">
+                <span>email</span>
+                <input type="email" name="" id="" placeholder="email">
+            </div>
+            <input type="submit" value="submit">
+        </div>
+        <div class="box box3">
+            <h2>security information</h2>
+            <b>security information about your account</b>
+            <div class="row row1">
+                <div>
+                    <span>password</span>
+                    <span>last change on 25/10/2022</span>
+                </div>
+                <span>change</span>
+            </div>
+            <div class="row row2">
+                <div>
+                    <span>two-factor authentication</span>
+                    <span>enable/disable the feature</span>
+                </div>
+                <span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                </span>
+            </div>
+            <div class="row row3">
+                <div>
+                    <span>devices</span>
+                    <span>check the login devices list</span>
+                </div>
+                <span>devices</span>
+            </div>
+        </div>
+        <div class="box box4">
+            <h2>social information</h2>
+            <b>social media information</b>
+            <div class="row row1">
+                <i class="fa-brands fa-twitter"></i>
+                <input type="text" name="" id="" placeholder="twitter username">
+            </div>
+            <div class="row row1">
+                <i class="fa-brands fa-facebook"></i>
+                <input type="text" name="" id="" placeholder="facebook username">
+            </div>
+            <div class="row row1">
+                <i class="fa-brands fa-linkedin"></i>
+                <input type="text" name="" id="" placeholder="linkedin username">
+            </div>
+            <div class="row row1">
+                <i class="fa-brands fa-youtube"></i>
+                <input type="text" name="" id="" placeholder="youtube username">
+            </div>
+        </div>
+        <div class="box box5">
+            <h2>widgets control</h2>
+            <b>show/hide widgets</b>
+            <form action="">
+               <div class="div">
+                    <input type="checkbox" name="" id="one" value="">
+                    <label for="">quick draft</label>
+               </div>
+                <div class="div">
+                    <input type="checkbox" name="" id="two" value="">
+                    <label for="">yearly targets</label>
+                </div>
+                <div class="div">
+                    <input type="checkbox" name="" id="three" value="">
+                    <label for="">tickets statistics</label>
+                </div>
+               <div class="div">
+                    <input type="checkbox" name="" id="four" value="">
+                    <label for="">latest news</label>
+               </div>
+                <div class="div">
+                    <input type="checkbox" name="" id="five" value="">
+                    <label for="">latest tasks</label>
+                </div>
+                <div class="div">
+                    <input type="checkbox" name="" id="six" value="">
+                    <label for="">top search items</label>
+                </div>
+            </form>
+        </div>
+        <div class="box box6">
+            <h2>backup manager</h2>
+            <b>control backup time and location</b>
+            <form action="">
+                <div>
+                    <input type="radio" name="group" id="one1" value="daily">
+                    <label for="one1">daily</label>
+                </div>
+                <div>
+                    <input type="radio" name="group" id="two2" value="weekly">
+                    <label for="two2">weekly</label>
+                </div>
+                <div>
+                    <input type="radio" name="group" id="three3" value="monthly">
+                    <label for="three3">monthly</label>
+                </div>
+            </form>
+            <div class="att">
+                <div class="row">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>management</span>
+                </div>
+                <div class="row">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>zero</span>
+                </div>
+                <div class="row">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>sigma</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

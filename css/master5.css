@@ -1,0 +1,104 @@
+body{
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+.right{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 25px;
+}
+.right .box{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.right .box .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.right .box .icons i{
+    color: #757272;
+    background-color: #ddd;
+    border-radius: 50%;
+    padding: 8px;
+}
+.right .box .one{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0/20%);
+    margin-bottom: 10px;
+}
+.right .box .one img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.right .box .one span:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.right .box .one span:nth-child(3){
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.right .box .two{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0/20%);
+    margin-bottom: 10px;
+}
+.right .box .two .row i{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    color: #1a191975;
+}
+.right .box .two .row span{
+    font-size: 15px;
+    font-weight: normal;
+    color: black;
+}
+.right .box .three{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .box .three span:first-child{
+    font-size: 12px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+    margin-right: 5px;
+}
+.right .box .three span:nth-child(2){
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 7px;
+}
+.right .box .three span:last-child{
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 7px;
+}

@@ -1,0 +1,96 @@
+body{
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+.page{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 25px;
+}
+.page .box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.page .box .one{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(9, 182, 9);
+    outline: 4px solid rgb(9, 182, 9);
+    padding: 10px;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.page .box .one span:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.page .box .one span:nth-child(2){
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 146px;
+}
+@media(max-width:767px){
+    .page .box .one span:nth-child(2){
+        font-size: 15px;
+        font-weight: normal;
+        color: white;
+        position: absolute;
+        top: 50px;
+        left: 142px;
+    }
+}
+.page .box .one span:last-child{
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+}
+.page .box .row{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(0 0 0/20%);
+    padding-bottom: 10px;
+}
+.page .box .row .fa-check{
+    color: rgb(9, 182, 9);
+}
+.page .box .row .fa-xmark{
+    color: red;
+}
+.page .box .row span:nth-child(2){
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+}
+.page .box .row .fa-exclamation{
+    position: absolute;
+    right: 0;
+    color: rgb(0 0 0/60%);
+}
+.page .box button{
+    font-size: 15px;
+    font-weight: normal;
+    width: fit-content;
+    background-color: rgb(9, 182, 9);
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    
+    display: block;
+    margin: 2px auto;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="css/master2.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        /* The switch - the box around the slider */
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 3.5em;
+            height: 2em;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #9fccfa;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2em;
+            width: 2em;
+            inset: 0;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .switch input:checked + .slider {
+            background: #0974f1;
+        }
+
+        .switch input:focus + .slider {
+            box-shadow: 0 0 1px #0974f1;
+        }
+
+        .switch input:checked + .slider:before {
+            transform: translateX(1.6em);
+        }
+    </style>
+</head>
+<body>
+    <div class="right">
+        <div class="one">
+            <div class="left">
+                <img src="images/Programming-rafiki.png" alt="">
+                <span class="name">mohamed atia</span>
+                <span class="lev">level 20</span>
+                <span class="one">
+                    <span class="two"></span>
+                </span>
+                <div class="icons">
+                    <i class="fa-sharp fa-solid fa-star" style="color: #ffff00;"></i>
+                    <i class="fa-sharp fa-solid fa-star" style="color: #ffff00;"></i>
+                    <i class="fa-sharp fa-solid fa-star" style="color: #ffff00;"></i>
+                    <i class="fa-sharp fa-solid fa-star" style="color: #ffff00;"></i>
+                    <i class="fa-sharp fa-solid fa-star" style="color: #ffff00;"></i>
+                </div>
+                <span>550 rating</span>
+            </div>
+            <div class="right">
+                <div class="row">
+                    <div class="one">
+                        <span>general information</span>
+                        <span>full name : mohamed atia</span>
+                    </div>
+                    <div class="two">
+                        <span>gender : male</span>
+                    </div>
+                    <div class="three">
+                        <span>country : egypt</span>
+                    </div>
+                    <div class="four">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one">
+                        <span>personal information</span>
+                        <span>email : o@nn.sa</span>
+                    </div>
+                    <div class="two">
+                        <span>phone : 0158974562</span>
+                    </div>
+                    <div class="three">
+                        <span>date of birth : 25/10/2020</span>
+                    </div>
+                    <div class="four">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one">
+                        <span>job information</span>
+                        <span>title : full stack developer</span>
+                    </div>
+                    <div class="two">
+                        <span>programming language : python</span>
+                    </div>
+                    <div class="three">
+                        <span>years of experience : 15+</span>
+                    </div>
+                    <div class="four">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one">
+                        <span>billing information</span>
+                        <span>payment method : paypal</span>
+                    </div>
+                    <div class="two">
+                        <span>email : email@website.com</span>
+                    </div>
+                    <div class="three">
+                        <span>subscription : monthly</span>
+                    </div>
+                    <div class="four">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="left">
+                <h2>my skills</h2>
+                <b>complete skill list</b>
+                <div class="row">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+                <div class="row">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+                <div class="row">
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+                <div class="row">
+                    <span>html</span>
+                    <span>html</span>
+                    <span>html</span>
+                </div>
+                <div class="row">
+                     <span>html</span> 
+                </div>
+                <div class="row">
+                    <span>html</span>
+                    <span>html</span>   
+                </div>
+                <div class="row">
+                    <span>html</span>
+                </div>
+            </div>
+            <div class="right">
+                <h2>latest activities</h2>
+                <b>latest activities done by the user</b>
+                <div class="row">
+                    <img src="images/fishing with net-rafiki.png" alt="" style="width: 50px; height: 50px;">
+                    <div class="one">
+                        <span>store</span>
+                        <span>bought the mastering python course</span>
+                    </div>
+                    <div class="two">
+                        <span>18.10</span>
+                        <span>yesterday</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/fishing with net-rafiki.png" alt="" style="width: 50px; height: 50px;">
+                    <div class="one">
+                        <span>store</span>
+                        <span>bought the mastering python course</span>
+                    </div>
+                    <div class="two">
+                        <span>18.10</span>
+                        <span>yesterday</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/fishing with net-rafiki.png" alt="" style="width: 50px; height: 50px;">
+                    <div class="one">
+                        <span>store</span>
+                        <span>bought the mastering python course</span>
+                    </div>
+                    <div class="two">
+                        <span>18.10</span>
+                        <span>yesterday</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/fishing with net-rafiki.png" alt="" style="width: 50px; height: 50px;">
+                    <div class="one">
+                        <span>store</span>
+                        <span>bought the mastering python course</span>
+                    </div>
+                    <div class="two">
+                        <span>18.10</span>
+                        <span>yesterday</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

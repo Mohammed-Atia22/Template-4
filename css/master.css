@@ -1,0 +1,918 @@
+:root{
+    --main-color: #ddd; 
+    --main-color-alt: #1787e0; 
+    --section-padding: 60px;
+    --main-transition: 0.3s;
+    --main-padding:100px
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+html {
+    scroll-behavior: smooth;
+    /* height: -webkit-fill-available;
+    width: -webkit-fill-available; */
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    height: 100%;
+    /* height: -webkit-fill-available;
+    width: -webkit-fill-available; */
+    overflow: hidden;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+*:focus{
+    outline: none;
+}
+/* .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+} */
+/* .heading{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--main-color);
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.dashboard{
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    /* flex-basis: 15%; */
+    width: 100%;
+    
+}
+.dashboard .left{
+    /* display: flex;
+    flex-direction: column; */
+    width: 200px;
+    background-color: white;
+    box-shadow: 38px -40px 23px -39px rgb(0 0 0/22%);
+    position: relative;
+}
+.dashboard .left p{
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    border-bottom: 2px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    width: fit-content;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: block;
+}
+.dashboard .left p::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: -11px;
+    left: 49px;
+    background-color: black;
+    border: 3px solid  #f1f5f9;
+   
+}
+.dashboard .left ul{
+    margin: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .left ul li{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 7px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px 15px 15px;
+    width: 100%;
+    transition: 0.4s;
+}
+.dashboard .left ul li:hover{
+    background-color: #ddd;
+}
+.dashboard .left ul li:first-child{
+    background-color: #ddd;
+}
+.dashboard .left ul li i{
+    width: 20px;
+    height: 20px;
+}
+.dashboard .left ul li a{
+    font: 25px;
+    color: black;
+}
+.dashboard .right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    max-width: 100%;
+} 
+.dashboard .right > .one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+}
+.dashboard .right > .one .start i{
+    position: relative;
+    right: -30px;
+    bottom: -2px;
+    color: rgb(0 0 0/40%);
+}
+.dashboard .right > .one .start input{
+    padding: 10px 0px 10px 30px;
+    border-radius: 5px;
+    border-color: rgb(0 0 0/40%);
+    border-width: 1px;
+}
+.dashboard .right > .one .end i{
+    margin-right: 10px;
+}
+.dashboard .right > .one .end .fa-bell{
+    position: relative;
+}
+.dashboard .right > .one .end .fa-bell::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: red;
+    top: -3px;
+    left: 10px;
+}
+.dashboard .right > .two{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.dashboard .right > .two  > h2{
+    padding: 10px 10px 20px 0;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two > h2::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+.dashboard .right > .two > h2::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+.dashboard .right > .two .boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 25px;
+}
+.dashboard .right > .two .boxes .box1{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+.dashboard .right > .two .boxes .box1 .one{
+    display: flex;
+    flex-direction: row;
+    background-color: #ddd;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box1 .one:first-child h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box1 .one:first-child p{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box1 .one div:nth-child(2) img{
+    width: 200px;
+    height: 120px;
+}
+.dashboard .right > .two .boxes .box1 .one > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 23px;
+    border: 3px solid white;
+}
+.dashboard .right > .two .boxes .box1 .two{
+    margin: 20px auto;
+    border-top: 1px solid rgb(0 0 0/20%);
+    border-bottom: 1px solid rgb(0 0 0/20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 30px;
+    width: 100%;
+}
+.dashboard .right > .two .boxes .box1 .two div p:first-child{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;   
+}
+.dashboard .right > .two .boxes .box1 .two div p:last-child{
+    font-size: 15px;
+    color: rgb(0 0 0/50%);
+}
+.dashboard .right > .two .boxes .box1 .three{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.dashboard .right > .two .boxes .box1 button{
+    margin: 10px 10px 50px 0px;
+    display: block;
+    text-align: end;
+    padding: 5px;
+    background-color: rgb(0 0 255);
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    border: none;
+}
+.dashboard .right > .two .boxes .box2{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box2 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+.dashboard .right > .two .boxes .box2 p{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(0 0 0/40%);
+    margin: 0 0 20px 20px;
+}
+.dashboard .right > .two .boxes .box2 input{
+    margin: 0 20px 20px 20px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+.dashboard .right > .two .boxes .box2 textarea{
+    margin: 0 20px 20px 20px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+.dashboard .right > .two .boxes .box2 div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.dashboard .right > .two .boxes .box2 div button{
+    margin: 0px 20px 20px 20px;
+    padding: 5px;
+    background-color: rgb(0 0 255);
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    border: none;
+}
+.dashboard .right > .two .boxes .box3{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+}
+.dashboard .right > .two .boxes .box3 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+.dashboard .right > .two .boxes .box3 p{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(0 0 0/40%);
+    margin: 0 0 20px 20px;
+}
+.dashboard .right > .two .boxes .box3 .info{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.dashboard .right > .two .boxes .box3 .info div:first-child{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.dashboard .right > .two .boxes .box3 .info i{
+    color: white;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child span:first-child{
+    font-size: 15px;
+    color: rgb(0 0 0/40%);
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child span:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child span:last-child{
+    width: 250px;
+    height: 2px;
+    background-color: #ddd;
+    position: relative;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child span:last-child::before{
+    content: "";
+    position: absolute;
+    background-color: blue;
+    width: 80%;
+    height: 100%;
+}
+.dashboard .right > .two .boxes .box3 .info div:last-child span:last-child::after{
+    content: " 80% ";
+    position: absolute;
+    color: white;
+    background-color: blue;
+    width: 25px;
+    height: 20px;
+    border-radius: 7px;
+    padding: 6px 8px;
+    top: -43px;
+    right: 34px;
+}
+.dashboard .right > .two .boxes .box4{
+    background-color: white;
+    border-radius: 10px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box4 .one{
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box4 .one h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box4 .one p{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box4 .two{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+}
+.dashboard .right > .two .boxes .box4 .two .info{
+    border: 1px solid rgb(0 0 0/30%);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard .right > .two .boxes .box4 .two .info i{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box4 .two .info span:nth-child(2){
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.dashboard .right > .two .boxes .box4 .two .info span:nth-child(3){
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box5{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 10px 10px;
+    
+    
+}
+.dashboard .right > .two .boxes .box5 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box5 .lmno{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgb(0 0 0/30%);
+    margin-bottom: 10px;
+    position: relative;
+}
+.dashboard .right > .two .boxes .box5 .lmno:last-child{
+    border-bottom: none;
+}
+/* .dashboard .right > .two .boxes .box5 .lmno:last-child .row{
+    margin-right: 15px
+} */
+.dashboard .right > .two .boxes .box5 .lmno img{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+}
+.dashboard .right > .two .boxes .box5 .lmno > .row{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.dashboard .right > .two .boxes .box5 .lmno .row p:first-child{
+    font-size: 13px;
+    font-weight: bold;
+}
+.dashboard .right > .two .boxes .box5 .lmno .row p:last-child{
+    font-size: 10px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box5 .lmno > p{
+    font-size: 10px;
+    background-color: #ddd;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+}
+.dashboard .right > .two .boxes .box6{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.dashboard .right > .two .boxes .box6 .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box6 .row:last-child{
+    border-bottom: none;
+}
+/* .dashboard .right > .two .boxes .box6 .row .mab{
+    margin-bottom: 15px;
+} */
+.dashboard .right > .two .boxes .box6 .row .mab p:first-child{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dashboard .right > .two .boxes .box6 .row .mab p:last-child{
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box7{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.dashboard .right > .two .boxes .box7 h2{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+.dashboard .right > .two .boxes .box7 .abc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box7 .abc span{
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box7 ul{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box7 ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.dashboard .right > .two .boxes .box7 ul li span:last-child{
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+.dashboard .right > .two .boxes .box8{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.dashboard .right > .two .boxes .box8 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.dashboard .right > .two .boxes .box8 .row{
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    border-bottom: 1px solid rgb(0 0 0/30%);
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.dashboard .right > .two .boxes .box8 .row:last-child{
+    border-bottom: none;
+}
+.dashboard .right > .two .boxes .box8 .row i{
+    width: 20px;
+    height: 20px;
+    color: red;
+}
+.dashboard .right > .two .boxes .box8 .row div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+.dashboard .right > .two .boxes .box8 .row div span:last-child{
+    margin-top: 10px;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box8 .row > span{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.dashboard .right > .two .boxes .box9{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box9 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box9 ul{
+    padding: 0px 0px 0px 20px;
+    border-left: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.dashboard .right > .two .boxes .box9 ul li{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.dashboard .right > .two .boxes .box9 ul li:last-child{
+    margin-bottom: 0;
+}
+.dashboard .right > .two .boxes .box9 ul li span:first-child{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid blue;
+    position: absolute;
+    left: -31px;
+}
+.dashboard .right > .two .boxes .box9 ul li span:nth-child(2){
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: blue;
+    border: 2px solid white;
+    position: absolute;
+    left: -29px;
+    top: 2px;
+}
+.dashboard .right > .two .boxes .box9 ul li:last-child span:nth-child(2){
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    left: -29px;
+    top: 2px;
+}
+.dashboard .right > .two .boxes .box10{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.dashboard .right > .two .boxes .box10 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box10 .row{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 2px solid blue;
+    position: relative;
+    margin-left: 30px;
+}
+.dashboard .right > .two .boxes .box10 .row span{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    background-color: blue;
+}
+.dashboard .right > .two .boxes .box10 .row p:nth-child(2){
+    color: black;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.dashboard .right > .two .boxes .box10 .row p:last-child{
+    color: rgb(0 0 0/30%);
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: normal;
+}
+.dashboard .right > .two .boxes .box11{
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .right > .two .boxes .box11 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box11 .row1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 1px solid rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box11 .row1 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.dashboard .right > .two .boxes .box11 .row1 .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dashboard .right > .two .boxes .box11 .row1 .info p:first-child{
+    font-size: 15px;
+    font-weight: bold;
+}
+.dashboard .right > .two .boxes .box11 .row1 .info p:last-child{
+    font-size: 15px;
+    color: rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box11 .row2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
+    line-height: 1.5;
+    border-bottom: 1px solid rgb(0 0 0/30%);
+}
+.dashboard .right > .two .boxes .box11 .row3{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard .right > .two .boxes .box11 .row3 .info i,.dashboard .right > .two .boxes .box11 .row3 .info span{
+    color: rgb(0 0 0/40%);
+}
+.dashboard .right > .two .boxes .box12{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.dashboard .right > .two .boxes .box12 h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .two .boxes .box12 .row{
+    /* padding: 25px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+.dashboard .right > .two .boxes .box12 .row span:first-child{
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard .right > .two .boxes .box12 .row span:first-child i{
+    font-size: 30px;
+    color: white;
+}
+.dashboard .right > .two .boxes .box12 .row span:nth-child(2){
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.dashboard .right > .two .boxes .box12 .row span:last-child{
+    position: absolute;
+    right: 0;
+    color: white;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+.dashboard .right > .three{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.dashboard .right > .three h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.dashboard .right > .three table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.dashboard .right > .three table tr{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dashboard .right > .three table tr th{
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dashboard .right > .three table tr td{
+    padding: 15px 25px;
+    background-color: #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 1px solid rgb(0 0 0/25%);
+    border-bottom: 1px solid rgb(0 0 0/25%);
+    color: black;
+    background-color: white;
+    color: rgb(0 0 0/40%);
+}
+.dashboard .right > .three table tr td:last-child{
+    border-right: 1px solid rgb(0 0 0/25%);
+    position: relative;
+    padding-bottom: 33px;
+}
+.dashboard .right > .three table tr td:last-child span{
+    
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    /* width: fit-content;
+    max-width: 100%; */
+    /* max-height: 100%; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dashboard .right > .three table tr td:nth-child(5){
+    position: relative;
+    padding-bottom: 23px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dashboard .right > .three table tr td:nth-child(5) .image{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+.dashboard .right > .three table tr td:nth-child(5) .image img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
